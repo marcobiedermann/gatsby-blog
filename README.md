@@ -1,1 +1,1 @@
-# gatsby-blog-template
+# Gatsby Blog

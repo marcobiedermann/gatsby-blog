@@ -28,7 +28,7 @@ interface StaticQuery {
 const IndexPage: FC<PageProps> = () => {
   const { allMarkdownRemark } = useStaticQuery<StaticQuery>(graphql`
     query {
-      allMarkdownRemark(sort: {  fields: frontmatter___date, order: DESC  }, limit: 10) {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }, limit: 10) {
         edges {
           node {
             excerpt

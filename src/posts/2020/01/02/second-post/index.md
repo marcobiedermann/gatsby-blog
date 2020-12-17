@@ -7,8 +7,6 @@ tags:
   - 'list'
 ---
 
-# Regio a humilis fluctus
-
 ## Deum mora
 
 Lorem markdownum deflent, in **dumque vobis terras** captam caligine. Manibusque

@@ -8,6 +8,7 @@ interface Fields {
 }
 
 interface Frontmatter {
+  date: string;
   title: string;
 }
 
@@ -17,6 +18,7 @@ interface Node {
   frontmatter: Frontmatter;
   html: string;
   id: string;
+  timeToRead: number;
 }
 
 interface Edge {
@@ -27,18 +29,23 @@ interface AllMarkdownRemark {
   edges: Edge[];
 }
 
-export interface DataProps {
+interface DataType {
   allMarkdownRemark: AllMarkdownRemark;
 }
 
-const TagTemplate: FC<PageProps<DataProps>> = (props) => {
+interface PageContext {
+  tag: string;
+}
+
+const TagTemplate: FC<PageProps<DataType, PageContext>> = (props) => {
   const {
     data: { allMarkdownRemark },
+    pageContext: { tag },
   } = props;
 
   return (
     <Layout>
-      <h1>Hi people</h1>
+      <h1>{tag}</h1>
       <Posts posts={allMarkdownRemark.edges.map((edge) => edge.node)} />
     </Layout>
   );
@@ -58,10 +65,12 @@ export const query = graphql`
             slug
           }
           frontmatter {
+            date
             title
           }
           html
           id
+          timeToRead
         }
       }
     }

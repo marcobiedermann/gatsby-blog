@@ -8,6 +8,7 @@ interface Fields {
 }
 
 interface Frontmatter {
+  date: string;
   title: string;
 }
 
@@ -17,6 +18,7 @@ interface Node {
   frontmatter: Frontmatter;
   html: string;
   id: string;
+  timeToRead: number;
 }
 
 interface Edge {
@@ -42,10 +44,12 @@ const IndexPage: FC<PageProps> = () => {
               slug
             }
             frontmatter {
+              date
               title
             }
             html
             id
+            timeToRead
           }
         }
       }

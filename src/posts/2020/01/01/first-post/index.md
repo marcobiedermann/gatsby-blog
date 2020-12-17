@@ -8,8 +8,6 @@ tags:
   - 'table'
 ---
 
-# Despectat similis
-
 ## Achivi dedecus si limite tabent manu motis
 
 [Lorem](http://www.inquire.org/pugnattulit) markdownum ipsa; in ipsi umeros **ad

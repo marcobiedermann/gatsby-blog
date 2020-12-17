@@ -1,5 +1,7 @@
 import { graphql, PageProps } from 'gatsby';
 import React, { FC } from 'react';
+import Button from '../../components/Button';
+import Layout from '../../components/Layout';
 
 export interface DataProps {
   markdownRemark: {
@@ -15,13 +17,15 @@ const PostPage: FC<PageProps<DataProps>> = (props) => {
     data: { markdownRemark },
   } = props;
 
-  const { html, frontmatter } = markdownRemark;
+  const { html } = markdownRemark;
 
   return (
-    <div>
-      <h1>{frontmatter.title}</h1>
+    <Layout>
       <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+      <p>
+        <Button to="/">back</Button>
+      </p>
+    </Layout>
   );
 };
 

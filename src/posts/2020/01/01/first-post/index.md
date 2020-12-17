@@ -1,6 +1,11 @@
 ---
 title: 'First Post'
 date: '2020-01-01'
+tags:
+    - 'code'
+    - 'headline'
+    - 'list'
+    - 'table'
 ---
 
 # Despectat similis
@@ -75,3 +80,9 @@ Anhelanti rapuitque causa, sub in prius: dum _hoc_ tenax. Non praeterea motura
 Iunone vere ferre, _posuit naides_, et artus. Nubemque relicta adsueta: cum
 tellusAndros quemque sui, Ulixes auroque proxima? Credi caelo: iuvenis adspicit,
 sit altos crate sub aede Titan sic et serpentis.
+
+| Tables        |      Are      |  Cool |
+| ------------- | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |

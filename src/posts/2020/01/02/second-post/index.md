@@ -1,6 +1,10 @@
 ---
 title: 'Second Post'
 date: '2020-01-02'
+tags:
+  - 'blockquote'
+  - 'headline'
+  - 'list'
 ---
 
 # Regio a humilis fluctus

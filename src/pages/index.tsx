@@ -1,6 +1,7 @@
-import { graphql, Link, PageProps, useStaticQuery } from 'gatsby';
+import { graphql, PageProps, useStaticQuery } from 'gatsby';
 import React, { FC } from 'react';
 import Layout from '../components/Layout';
+import Posts from '../components/Posts';
 
 interface Frontmatter {
   title: string;
@@ -43,27 +44,13 @@ const IndexPage: FC<PageProps> = () => {
     }
   `);
 
+  console.log({ allMarkdownRemark });
+
+
   return (
     <Layout>
       <h1>Hi people</h1>
-      <ol>
-        {allMarkdownRemark.edges.map((edge) => {
-          const {
-            node: { excerpt, frontmatter, id },
-          } = edge;
-
-          return (
-            <li key={id}>
-              <article>
-                <h2>
-                  <Link to={`/posts/${id}`}>{frontmatter.title}</Link>
-                </h2>
-                <p>{excerpt}</p>
-              </article>
-            </li>
-          );
-        })}
-      </ol>
+      <Posts posts={allMarkdownRemark.edges.map((edge) => edge.node)} />
     </Layout>
   );
 };

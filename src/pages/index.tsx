@@ -52,8 +52,6 @@ const IndexPage: FC<PageProps> = () => {
     }
   `);
 
-  console.log({ allMarkdownRemark });
-
   return (
     <Layout>
       <h1>Hi people</h1>

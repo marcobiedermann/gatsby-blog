@@ -1,6 +1,6 @@
 import { graphql, Link, PageProps, useStaticQuery } from 'gatsby';
 import React, { FC } from 'react';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 interface Frontmatter {
   title: string;
@@ -43,7 +43,6 @@ const IndexPage: FC<PageProps> = () => {
     }
   `);
 
-  console.log({ allMarkdownRemark });
   return (
     <Layout>
       <h1>Hi people</h1>

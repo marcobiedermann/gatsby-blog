@@ -115,11 +115,16 @@ html {
   scroll-behavior: smooth;
 }
 
+iframe {
+  border: 0;
+}
+
 strong {
   color: var(--color-headlines);
   font-weight: 600;
 }
 
+iframe,
 table {
   width: 100%;
 }
@@ -134,4 +139,14 @@ th[align='center'] {
 
 th[align='right'] {
   text-align: right;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  font-family: Fira Code, monospace;
+}
+
+pre[class*='language-'] {
+  margin-bottom: 1.5em;
+  margin-top: 0.5em;
 }

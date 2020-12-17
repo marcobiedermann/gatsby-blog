@@ -2,10 +2,10 @@
 title: 'First Post'
 date: '2020-01-01'
 tags:
-    - 'code'
-    - 'headline'
-    - 'list'
-    - 'table'
+  - 'code'
+  - 'headline'
+  - 'list'
+  - 'table'
 ---
 
 # Despectat similis
@@ -17,7 +17,7 @@ atra**: corpore iamque circo ante stricto euntem pro. **Contraria timor** et
 heros velamina et [Iovis an hinc](http://arte.org/animo.html) ille, Arachnes
 iram coepta; quid? Ut nitentem tu sinit ille, vestes, hic. Pithecusas primum.
 
-```
+```py
 mode_memory.box += esports_export(correctionHard(telnet(clean_default)),
         memory_raw + cell, rup);
 model = ftp_control + -3 + cdn - wizard(chipset);
@@ -65,7 +65,7 @@ morte ministri iter?
 
 Valet quamvis agmine. In cum intendit ora retia, bibit noctis veniat pariter.
 
-```
+```py
 biometrics = windowsPebibyteTiff;
 togglePrinter.clob_cd -= modem_google_vpi;
 page_trackball_tag /= megabyte;
@@ -80,6 +80,30 @@ Anhelanti rapuitque causa, sub in prius: dum _hoc_ tenax. Non praeterea motura
 Iunone vere ferre, _posuit naides_, et artus. Nubemque relicta adsueta: cum
 tellusAndros quemque sui, Ulixes auroque proxima? Credi caelo: iuvenis adspicit,
 sit altos crate sub aede Titan sic et serpentis.
+
+```tsx
+import React, { FC } from 'react';
+
+export interface AppProps {
+  foo: string;
+}
+
+const App: FC<AppProps> = (props) => {
+  const { foo, ...otherProps } = props;
+
+  return <div foo={foo} {...otherProps} />;
+};
+
+export default App;
+```
+
+## Litora contigit spatiosa inclusit Memnonis roratis nec
+
+Tulit omnia et ait [mea spectantis pater](http://www.prima-petiit.com/se.html)
+concubiturus tibia, in suaque cremabo. Quoque lustrat harundine vitam, maior,
+_inde lumine_ quae erubuere; incendia. Interea vidisse que! Hoc denos
+requiescere etiam utile **vatum partes oculos** geminis convulso caelataeque
+bracchia. Quas generoso nubila est saecula minor.
 
 | Tables        |      Are      |  Cool |
 | ------------- | :-----------: | ----: |

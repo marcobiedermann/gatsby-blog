@@ -12,7 +12,7 @@ export interface DataProps {
   };
 }
 
-const PostPage: FC<PageProps<DataProps>> = (props) => {
+const PostTemplate: FC<PageProps<DataProps>> = (props) => {
   const {
     data: { markdownRemark },
   } = props;
@@ -40,4 +40,4 @@ export const query = graphql`
   }
 `;
 
-export default PostPage;
+export default PostTemplate;

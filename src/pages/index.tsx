@@ -3,12 +3,17 @@ import React, { FC } from 'react';
 import Layout from '../components/Layout';
 import Posts from '../components/Posts';
 
+interface Fields {
+  slug: string;
+}
+
 interface Frontmatter {
   title: string;
 }
 
 interface Node {
   excerpt: string;
+  fields: Fields;
   frontmatter: Frontmatter;
   html: string;
   id: string;
@@ -33,6 +38,9 @@ const IndexPage: FC<PageProps> = () => {
         edges {
           node {
             excerpt
+            fields {
+              slug
+            }
             frontmatter {
               title
             }
@@ -45,7 +53,6 @@ const IndexPage: FC<PageProps> = () => {
   `);
 
   console.log({ allMarkdownRemark });
-
 
   return (
     <Layout>

@@ -1,7 +1,9 @@
-import { graphql, Link, PageProps } from 'gatsby';
+import { graphql, PageProps } from 'gatsby';
 import React, { FC } from 'react';
 import Button from '../../components/Button';
 import Layout from '../../components/Layout';
+import Section from '../../components/Section';
+import Tags from '../../components/Tags';
 
 export interface DataProps {
   markdownRemark: {
@@ -24,27 +26,27 @@ const PostTemplate: FC<PageProps<DataProps>> = (props) => {
 
   return (
     <Layout>
-      <header>
-        <h1>{frontmatter.title}</h1>
-        <div>
-          {frontmatter.date} • {timeToRead} mins.
-        </div>
-      </header>
-      <main>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </main>
-      <footer>
-        <ul>
-          {frontmatter.tags.map((tag) => (
-            <li key={tag}>
-              <Link to={`/tags/${tag}`}>{tag}</Link>
-            </li>
-          ))}
-        </ul>
-      </footer>
-      <p>
-        <Button to="/">back</Button>
-      </p>
+      <Section>
+        <article>
+          <header>
+            <h1>{frontmatter.title}</h1>
+            <div>
+              {frontmatter.date} • {timeToRead} mins.
+            </div>
+          </header>
+          <main>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </main>
+          <footer>
+            <Tags tags={frontmatter.tags} />
+          </footer>
+        </article>
+      </Section>
+      <Section>
+        <p>
+          <Button to="/">back</Button>
+        </p>
+      </Section>
     </Layout>
   );
 };

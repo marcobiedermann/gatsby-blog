@@ -1,9 +1,11 @@
+import dayjs from 'dayjs';
 import { graphql, PageProps } from 'gatsby';
 import React, { FC } from 'react';
 import Button from '../../components/Button';
 import Layout from '../../components/Layout';
 import Section from '../../components/Section';
 import Tags from '../../components/Tags';
+import { DATE_FORMAT } from '../../constants/date';
 
 export interface DataProps {
   markdownRemark: {
@@ -31,7 +33,8 @@ const PostTemplate: FC<PageProps<DataProps>> = (props) => {
           <header>
             <h1>{frontmatter.title}</h1>
             <div>
-              {frontmatter.date} • {timeToRead} mins.
+              <time dateTime={frontmatter.date}>{dayjs(frontmatter.date).format(DATE_FORMAT)}</time>{' '}
+              • {timeToRead} mins.
             </div>
           </header>
           <main>

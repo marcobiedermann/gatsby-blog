@@ -1,5 +1,7 @@
+import dayjs from 'dayjs';
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
+import { DATE_FORMAT } from '../../constants/date';
 
 interface Fields {
   slug: string;
@@ -27,7 +29,8 @@ const PostPreview: FC<PostPreviewProps> = (props) => {
         <Link to={`/blog${fields.slug}`}>{frontmatter.title}</Link>
       </h2>
       <div>
-        {frontmatter.date} • {timeToRead} mins.
+        <time dateTime={frontmatter.date}>{dayjs(frontmatter.date).format(DATE_FORMAT)}</time> •{' '}
+        {timeToRead} mins.
       </div>
       <p>{excerpt}</p>
     </article>

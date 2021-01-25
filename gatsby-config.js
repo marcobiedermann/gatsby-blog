@@ -30,6 +30,9 @@ const config = {
       resolve: 'gatsby-plugin-sharp',
     },
     {
+      resolve: 'gatsby-plugin-twitter',
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
@@ -49,6 +52,9 @@ const config = {
         plugins: [
           {
             resolve: 'gatsby-remark-autolink-headers',
+          },
+          {
+            resolve: 'gatsby-remark-embedder',
           },
           {
             resolve: 'gatsby-remark-prismjs',

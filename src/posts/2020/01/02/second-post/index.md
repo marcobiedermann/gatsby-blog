@@ -48,10 +48,7 @@ reliquit Aeacus monticolae residant unica?
 5. Ferventia ore nulla pereunt
 6. Telorum ille
 
-<iframe width="1440" height="810" title="Apple Sticky Menu" src="https://codepen.io/marcobiedermann/embed/LYZGEER?height=810&theme-id=dark&default-tab=result"  loading="lazy">
-  See the Pen <a href='https://codepen.io/marcobiedermann/pen/LYZGEER'>Apple Sticky Menu</a> by Marco Biedermann
-  (<a href='https://codepen.io/marcobiedermann'>@marcobiedermann</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+https://codepen.io/marcobiedermann/pen/LYZGEER
 
 ## Illa praesensque voles
 

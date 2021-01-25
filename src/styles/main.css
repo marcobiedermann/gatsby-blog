@@ -117,6 +117,13 @@ html {
 
 iframe {
   border: 0;
+  height: 533px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
 strong {

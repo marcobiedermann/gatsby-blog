@@ -3,11 +3,12 @@ import { graphql, PageProps } from 'gatsby';
 import React, { FC } from 'react';
 import Button from '../../components/Button';
 import Layout from '../../components/Layout';
+import Pagination from '../../components/Pagination';
 import Section from '../../components/Section';
 import Tags from '../../components/Tags';
 import { DATE_FORMAT } from '../../constants/date';
 
-export interface DataProps {
+export interface DataType {
   markdownRemark: {
     frontmatter: {
       date: string;
@@ -19,33 +20,54 @@ export interface DataProps {
   };
 }
 
-const PostTemplate: FC<PageProps<DataProps>> = (props) => {
-  const {
-    data: { markdownRemark },
-  } = props;
+interface PageContextType {
+  id: string;
+  next: {
+    fields: {
+      slug: string;
+    };
+    id: string;
+  } | null;
+  previous: {
+    fields: {
+      slug: string;
+    };
+    id: string;
+  } | null;
+}
 
-  const { frontmatter, html, timeToRead } = markdownRemark;
+const PostTemplate: FC<PageProps<DataType, PageContextType>> = (props) => {
+  const {
+    data: {
+      markdownRemark: {
+        frontmatter: { date, tags, title },
+        html,
+        timeToRead,
+      },
+    },
+    pageContext: { next, previous },
+  } = props;
 
   return (
     <Layout>
       <Section>
         <article>
           <header>
-            <h1>{frontmatter.title}</h1>
+            <h1>{title}</h1>
             <div>
-              <time dateTime={frontmatter.date}>{dayjs(frontmatter.date).format(DATE_FORMAT)}</time>{' '}
-              • {timeToRead} mins.
+              <time dateTime={date}>{dayjs(date).format(DATE_FORMAT)}</time> • {timeToRead} mins.
             </div>
           </header>
           <main>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </main>
           <footer>
-            <Tags tags={frontmatter.tags} />
+            <Tags tags={tags} />
           </footer>
         </article>
       </Section>
       <Section>
+        <Pagination next={next} previous={previous} />
         <p>
           <Button to="/">back</Button>
         </p>

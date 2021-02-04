@@ -4,6 +4,14 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const postTemplate = path.resolve('./src/templates/Post/index.tsx');
 const tagTemplate = path.resolve('./src/templates/Tag/index.tsx');
 
+function getPrevious(edges, index) {
+  return index === 0 ? null : edges[index - 1].node;
+}
+
+function getNext(edges, index) {
+  return index === edges.length - 1 ? null : edges[index + 1].node;
+}
+
 async function createPages({ graphql, actions, reporter }) {
   const { createPage } = actions;
 
@@ -11,10 +19,12 @@ async function createPages({ graphql, actions, reporter }) {
     {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }, limit: 1000) {
         distinct(field: frontmatter___tags)
-        nodes {
-          id
-          fields {
-            slug
+        edges {
+          node {
+            fields {
+              slug
+            }
+            id
           }
         }
       }
@@ -28,7 +38,7 @@ async function createPages({ graphql, actions, reporter }) {
   }
 
   const {
-    allMarkdownRemark: { distinct, nodes },
+    allMarkdownRemark: { distinct, edges },
   } = data;
 
   distinct.forEach((tag) => {
@@ -41,13 +51,19 @@ async function createPages({ graphql, actions, reporter }) {
     });
   });
 
-  nodes.forEach((node) => {
-    const { fields, id } = node;
+  edges.forEach((edge, index) => {
+    const {
+      node: { fields, id },
+    } = edge;
+    const next = getNext(edges, index);
+    const previous = getPrevious(edges, index);
 
     createPage({
       component: postTemplate,
       context: {
         id,
+        next,
+        previous,
       },
       path: `/blog${fields.slug}`,
     });

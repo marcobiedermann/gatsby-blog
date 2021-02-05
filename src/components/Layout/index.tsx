@@ -1,12 +1,13 @@
+import dayjs from 'dayjs';
 import { Link } from 'gatsby';
-import React from 'react';
+import React, { FC } from 'react';
 import Footer from '../Footer';
 import Grid from '../Grid';
 import Header from '../Header';
 import Main from '../Main';
 import styles from './style.module.css';
 
-const Layout = (props) => {
+const Layout: FC = (props) => {
   const { children } = props;
 
   return (
@@ -22,9 +23,12 @@ const Layout = (props) => {
 
       <Footer>
         <Grid>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <p>
+            © {dayjs().format('YYYY')}, Built with{' '}
+            <a href="https://www.gatsbyjs.com" rel="noopener noreferrer" target="_blank">
+              Gatsby
+            </a>
+          </p>
         </Grid>
       </Footer>
     </div>

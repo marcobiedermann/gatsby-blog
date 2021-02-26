@@ -1,8 +1,8 @@
-const path = require('path');
+const { resolve } = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
-const postTemplate = path.resolve('./src/templates/Post/index.tsx');
-const tagTemplate = path.resolve('./src/templates/Tag/index.tsx');
+const postTemplate = resolve('./src/templates/Post/index.tsx');
+const tagTemplate = resolve('./src/templates/Tag/index.tsx');
 
 function getPrevious(edges, index) {
   return index === 0 ? null : edges[index - 1].node;

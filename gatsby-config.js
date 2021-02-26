@@ -57,6 +57,9 @@ const config = {
             resolve: 'gatsby-remark-embedder',
           },
           {
+            resolve: `gatsby-remark-images`,
+          },
+          {
             resolve: 'gatsby-remark-prismjs',
           },
           {

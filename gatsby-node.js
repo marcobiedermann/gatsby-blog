@@ -78,6 +78,7 @@ function onCreateNode({ node, actions, getNode }) {
     const value = createFilePath({
       getNode,
       node,
+      trailingSlash: false,
     });
 
     createNodeField({

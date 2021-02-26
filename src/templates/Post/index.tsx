@@ -1,12 +1,10 @@
-import dayjs from 'dayjs';
 import { graphql, PageProps } from 'gatsby';
 import React, { FC } from 'react';
 import Button from '../../components/Button';
 import Layout from '../../components/Layout';
 import Pagination from '../../components/Pagination';
+import Post from '../../components/Post';
 import Section from '../../components/Section';
-import Tags from '../../components/Tags';
-import { DATE_FORMAT } from '../../constants/date';
 
 export interface DataType {
   markdownRemark: {
@@ -51,20 +49,7 @@ const PostTemplate: FC<PageProps<DataType, PageContextType>> = (props) => {
   return (
     <Layout>
       <Section>
-        <article>
-          <header>
-            <h1>{title}</h1>
-            <div>
-              <time dateTime={date}>{dayjs(date).format(DATE_FORMAT)}</time> • {timeToRead} mins.
-            </div>
-          </header>
-          <main>
-            <div dangerouslySetInnerHTML={{ __html: html }} />
-          </main>
-          <footer>
-            <Tags tags={tags} />
-          </footer>
-        </article>
+        <Post date={date} html={html} tags={tags} timeToRead={timeToRead} title={title} />
       </Section>
       <Section>
         <Pagination next={next} previous={previous} />

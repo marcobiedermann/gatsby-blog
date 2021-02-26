@@ -4,14 +4,6 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const postTemplate = resolve('./src/templates/Post/index.tsx');
 const tagTemplate = resolve('./src/templates/Tag/index.tsx');
 
-function getPrevious(edges, index) {
-  return index === 0 ? null : edges[index - 1].node;
-}
-
-function getNext(edges, index) {
-  return index === edges.length - 1 ? null : edges[index + 1].node;
-}
-
 async function createPages({ graphql, actions, reporter }) {
   const { createPage } = actions;
 
@@ -20,11 +12,21 @@ async function createPages({ graphql, actions, reporter }) {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }, limit: 1000) {
         distinct(field: frontmatter___tags)
         edges {
+          next {
+            fields {
+              slug
+            }
+          }
           node {
             fields {
               slug
             }
             id
+          }
+          previous {
+            fields {
+              slug
+            }
           }
         }
       }
@@ -51,12 +53,12 @@ async function createPages({ graphql, actions, reporter }) {
     });
   });
 
-  edges.forEach((edge, index) => {
+  edges.forEach((edge) => {
     const {
+      next,
       node: { fields, id },
+      previous,
     } = edge;
-    const next = getNext(edges, index);
-    const previous = getPrevious(edges, index);
 
     createPage({
       component: postTemplate,
@@ -71,10 +73,10 @@ async function createPages({ graphql, actions, reporter }) {
 }
 
 function onCreateNode({ node, actions, getNode }) {
-  const { createNodeField } = actions;
   const { internal } = node;
 
   if (internal.type === 'MarkdownRemark') {
+    const { createNodeField } = actions;
     const value = createFilePath({
       getNode,
       node,

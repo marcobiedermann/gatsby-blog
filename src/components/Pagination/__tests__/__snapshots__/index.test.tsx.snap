@@ -5,14 +5,18 @@ exports[`pagination component should render correctly 1`] = `
   <ul
     class="pagination"
   >
-    <li>
+    <li
+      class="pagination__item pagination__itemPrevious"
+    >
       <a
         href="/blogprevious-post"
       >
         « Previous
       </a>
     </li>
-    <li>
+    <li
+      class="pagination__item pagination__itemNext"
+    >
       <a
         href="/blognext-post"
       >

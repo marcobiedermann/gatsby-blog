@@ -1,8 +1,10 @@
 # Gatsby Blog
 
-[![dependencies Status](https://img.shields.io/david/marcobiedermann/gatsby-shopify)](https://david-dm.org/marcobiedermann/gatsby-shopify)
-[![devDependencies Status](https://img.shields.io/david/dev/marcobiedermann/gatsby-shopify)](https://david-dm.org/marcobiedermann/gatsby-shopify?type=dev)
+[![codecov](https://img.shields.io/codecov/c/gh/marcobiedermann/gatsby-blog)](https://codecov.io/gh/marcobiedermann/gatsby-blog)
+[![dependencies Status](https://img.shields.io/david/marcobiedermann/gatsby-blog)](https://david-dm.org/marcobiedermann/gatsby-blog)
+[![devDependencies Status](https://img.shields.io/david/dev/marcobiedermann/gatsby-blog)](https://david-dm.org/marcobiedermann/gatsby-blog?type=dev)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e48fac14-ddb2-4848-9373-75c6501ac91e/deploy-status)](https://app.netlify.com/sites/marcobiedermann-gatsby-blog/deploys)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/marcobiedermann/gatsby-blog/CI)
 
 A starter for [Gatsby](https://www.gatsbyjs.com/) blog powered by Markdown.
 

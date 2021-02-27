@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import classNames from 'classnames';
 import { Link } from 'gatsby';
 import React, { FC } from 'react';
 import styles from './style.module.css';
@@ -22,22 +22,12 @@ const Pagination: FC<PaginationProps> = (props) => {
   return (
     <ul className={styles.pagination}>
       {previous && (
-        <li
-        className={classNames(
-          styles.pagination__item,
-          styles.pagination__itemPrevious
-        )}
-      >
+        <li className={classNames(styles.pagination__itemPrevious)}>
           <Link to={`/blog${previous.fields.slug}`}>« Previous</Link>
         </li>
       )}
       {next && (
-        <li
-        className={classNames(
-          styles.pagination__item,
-          styles.pagination__itemNext
-        )}
-      >
+        <li className={classNames(styles.pagination__itemNext)}>
           <Link to={`/blog${next.fields.slug}`}>Next »</Link>
         </li>
       )}

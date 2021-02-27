@@ -6,7 +6,7 @@ exports[`pagination component should render correctly 1`] = `
     class="pagination"
   >
     <li
-      class="pagination__item pagination__itemPrevious"
+      class="pagination__itemPrevious"
     >
       <a
         href="/blogprevious-post"
@@ -15,7 +15,7 @@ exports[`pagination component should render correctly 1`] = `
       </a>
     </li>
     <li
-      class="pagination__item pagination__itemNext"
+      class="pagination__itemNext"
     >
       <a
         href="/blognext-post"

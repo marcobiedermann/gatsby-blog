@@ -5,7 +5,7 @@ import Footer from '../Footer';
 import Grid from '../Grid';
 import Header from '../Header';
 import Main from '../Main';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 const Layout: FC = (props) => {
   const { children } = props;

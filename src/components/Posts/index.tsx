@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import PostPreview, { PostPreviewProps } from '../PostPreview';
-import styles from './style.module.css';
+import * as styles from './style.module.css';
 
 export interface PostsProps {
   posts: PostPreviewProps[];

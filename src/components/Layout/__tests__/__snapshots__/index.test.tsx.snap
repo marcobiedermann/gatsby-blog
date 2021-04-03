@@ -2,15 +2,9 @@
 
 exports[`layout component should render correctly 1`] = `
 <DocumentFragment>
-  <div
-    class="layout"
-  >
-    <header
-      class="header"
-    >
-      <div
-        class="grid"
-      >
+  <div>
+    <header>
+      <div>
         <a
           href="/"
         >
@@ -18,21 +12,13 @@ exports[`layout component should render correctly 1`] = `
         </a>
       </div>
     </header>
-    <main
-      class="main"
-    >
-      <div
-        class="grid"
-      >
+    <main>
+      <div>
         Content
       </div>
     </main>
-    <footer
-      class="footer"
-    >
-      <div
-        class="grid"
-      >
+    <footer>
+      <div>
         <p>
           © 2021, Built with 
           <a

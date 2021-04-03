@@ -2,9 +2,7 @@
 
 exports[`main component should render correctly 1`] = `
 <DocumentFragment>
-  <main
-    class="main"
-  >
+  <main>
     Main
   </main>
 </DocumentFragment>

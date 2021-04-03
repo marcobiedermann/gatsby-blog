@@ -2,9 +2,7 @@
 
 exports[`footer component should render correctly 1`] = `
 <DocumentFragment>
-  <footer
-    class="footer"
-  >
+  <footer>
     Footer
   </footer>
 </DocumentFragment>

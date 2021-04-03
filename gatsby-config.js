@@ -7,6 +7,9 @@ const config = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-image',
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         background_color: '#663399',

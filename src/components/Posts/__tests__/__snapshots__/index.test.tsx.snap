@@ -2,9 +2,7 @@
 
 exports[`posts component should render correctly 1`] = `
 <DocumentFragment>
-  <ol
-    class="posts"
-  >
+  <ol>
     <li>
       <article>
         <h2>

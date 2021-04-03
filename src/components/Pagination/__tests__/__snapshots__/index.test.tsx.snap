@@ -2,11 +2,9 @@
 
 exports[`pagination component should render correctly 1`] = `
 <DocumentFragment>
-  <ul
-    class="pagination"
-  >
+  <ul>
     <li
-      class="pagination__itemPrevious"
+      class=""
     >
       <a
         href="/blogprevious-post"
@@ -15,7 +13,7 @@ exports[`pagination component should render correctly 1`] = `
       </a>
     </li>
     <li
-      class="pagination__itemNext"
+      class=""
     >
       <a
         href="/blognext-post"

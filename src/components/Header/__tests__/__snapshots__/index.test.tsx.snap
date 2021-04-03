@@ -2,9 +2,7 @@
 
 exports[`header component should render correctly 1`] = `
 <DocumentFragment>
-  <header
-    class="header"
-  >
+  <header>
     Header
   </header>
 </DocumentFragment>

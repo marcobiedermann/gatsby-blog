@@ -2,9 +2,7 @@
 
 exports[`button component should render correctly 1`] = `
 <DocumentFragment>
-  <button
-    class="button"
-  >
+  <button>
     Button
   </button>
 </DocumentFragment>

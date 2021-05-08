@@ -49,7 +49,7 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
-    "format": "prettier --write .",
+    "format": "prettier --ignore-path .gitignore --write .",
     "serve": "gatsby serve",
     "start": "npm run develop",
     "test": "jest"

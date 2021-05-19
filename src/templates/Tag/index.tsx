@@ -52,7 +52,7 @@ const TagTemplate: FC<PageProps<DataType, PageContext>> = (props) => {
 };
 
 export const query = graphql`
-  query($tag: String!) {
+  query ($tag: String!) {
     allMarkdownRemark(
       filter: { frontmatter: { tags: { in: [$tag] } } }
       sort: { fields: frontmatter___date, order: DESC }

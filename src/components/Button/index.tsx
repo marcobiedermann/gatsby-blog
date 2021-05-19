@@ -13,7 +13,7 @@ const Button: FC<ButtonProps> = (props) => {
     return <Link className={styles.button} to={to} {...otherProps} />;
   }
 
-  return <button className={styles.button} {...otherProps} />;
+  return <button className={styles.button} type="button" {...otherProps} />;
 };
 
 export default Button;

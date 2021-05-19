@@ -1,3 +1,5 @@
+/* eslint-disable react/no-danger */
+
 import dayjs from 'dayjs';
 import React, { FC } from 'react';
 import { DATE_FORMAT } from '../../constants/date';

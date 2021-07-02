@@ -62,7 +62,8 @@
     "lint": "eslint --ignore-path .gitignore '**/*.{js,jsx,ts,tsx}'",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test": "jest"
+    "test": "jest --runInBand",
+    "test:ci": "npm run test -- --color --ci"
   },
   "repository": {
     "type": "git",

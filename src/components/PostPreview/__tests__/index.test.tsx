@@ -5,8 +5,8 @@ import postPreview from '../__fixtures__';
 
 describe('post preview component', () => {
   it('should render correctly', () => {
-    const { asFragment } = render(<PostPreview {...postPreview} />);
+    const { container } = render(<PostPreview {...postPreview} />);
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

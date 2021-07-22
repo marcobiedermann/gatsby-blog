@@ -1,30 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`posts component should render correctly 1`] = `
-<DocumentFragment>
-  <ol>
-    <li>
-      <article>
-        <h2>
-          <a
-            href="/blogfirst-post"
-          >
-            First Post
-          </a>
-        </h2>
-        <div>
-          <time
-            datetime="2000-01-01"
-          >
-            01 Jan. 2000
-          </time>
-           • 1 mins.
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet.
-        </p>
-      </article>
-    </li>
-  </ol>
-</DocumentFragment>
+<ol>
+  <li>
+    <article>
+      <h2>
+        <a
+          href="/blogfirst-post"
+        >
+          First Post
+        </a>
+      </h2>
+      <div>
+        <time
+          datetime="2000-01-01"
+        >
+          01 Jan. 2000
+        </time>
+         •
+         
+        1
+         mins.
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet.
+      </p>
+    </article>
+  </li>
+</ol>
 `;

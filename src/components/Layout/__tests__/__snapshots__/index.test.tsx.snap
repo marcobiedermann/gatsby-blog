@@ -1,36 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`layout component should render correctly 1`] = `
-<DocumentFragment>
-  <div>
-    <header>
-      <div>
+<div>
+  <header>
+    <div>
+      <a
+        href="/"
+      >
+        Gatsby Blog
+      </a>
+    </div>
+  </header>
+  <main>
+    <div>
+      Content
+    </div>
+  </main>
+  <footer>
+    <div>
+      <p>
+        © 
+        2021
+        , Built with
+         
         <a
-          href="/"
+          href="https://www.gatsbyjs.com"
+          rel="noopener noreferrer"
+          target="_blank"
         >
-          Gatsby Blog
+          Gatsby
         </a>
-      </div>
-    </header>
-    <main>
-      <div>
-        Content
-      </div>
-    </main>
-    <footer>
-      <div>
-        <p>
-          © 2021, Built with 
-          <a
-            href="https://www.gatsbyjs.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Gatsby
-          </a>
-        </p>
-      </div>
-    </footer>
-  </div>
-</DocumentFragment>
+      </p>
+    </div>
+  </footer>
+</div>
 `;

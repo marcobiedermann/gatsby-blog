@@ -1,39 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`post component should render correctly 1`] = `
-<DocumentFragment>
-  <article>
-    <header>
-      <h1>
-        First Post
-      </h1>
-      <div>
-        <time
-          datetime="2000-01-01"
+<article>
+  <header>
+    <h1>
+      First Post
+    </h1>
+    <div>
+      <time
+        datetime="2000-01-01"
+      >
+        01 Jan. 2000
+      </time>
+       • 
+      1
+       mins.
+    </div>
+  </header>
+  <main>
+    <div>
+      <p>
+        Lorem Ipsum
+      </p>
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li>
+        <a
+          href="/tags/tag-1"
         >
-          01 Jan. 2000
-        </time>
-         • 1 mins.
-      </div>
-    </header>
-    <main>
-      <div>
-        <p>
-          Lorem Ipsum
-        </p>
-      </div>
-    </main>
-    <footer>
-      <ul>
-        <li>
-          <a
-            href="/tags/tag-1"
-          >
-            tag-1
-          </a>
-        </li>
-      </ul>
-    </footer>
-  </article>
-</DocumentFragment>
+          tag-1
+        </a>
+      </li>
+    </ul>
+  </footer>
+</article>
 `;

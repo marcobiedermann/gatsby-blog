@@ -5,8 +5,8 @@ import pagination from '../__fixtures__';
 
 describe('pagination component', () => {
   it('should render correctly', () => {
-    const { asFragment } = render(<Pagination {...pagination} />);
+    const { container } = render(<Pagination {...pagination} />);
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

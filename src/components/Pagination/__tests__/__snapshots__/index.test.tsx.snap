@@ -1,26 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`pagination component should render correctly 1`] = `
-<DocumentFragment>
-  <ul>
-    <li
-      class=""
+<ul>
+  <li
+    class=""
+  >
+    <a
+      href="/blogprevious-post"
     >
-      <a
-        href="/blogprevious-post"
-      >
-        « Previous
-      </a>
-    </li>
-    <li
-      class=""
+      « Previous
+    </a>
+  </li>
+  <li
+    class=""
+  >
+    <a
+      href="/blognext-post"
     >
-      <a
-        href="/blognext-post"
-      >
-        Next »
-      </a>
-    </li>
-  </ul>
-</DocumentFragment>
+      Next »
+    </a>
+  </li>
+</ul>
 `;

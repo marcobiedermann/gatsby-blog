@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`section component should render correctly 1`] = `
-<DocumentFragment>
-  <section>
-    Section
-  </section>
-</DocumentFragment>
+<section>
+  Section
+</section>
 `;

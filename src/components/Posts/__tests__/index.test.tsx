@@ -5,8 +5,8 @@ import posts from '../__fixtures__';
 
 describe('posts component', () => {
   it('should render correctly', () => {
-    const { asFragment } = render(<Posts {...posts} />);
+    const { container } = render(<Posts {...posts} />);
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

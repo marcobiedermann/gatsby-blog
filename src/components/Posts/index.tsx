@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import PostPreview, { PostPreviewProps } from '../PostPreview';
 import * as styles from './style.module.css';
 
@@ -6,7 +6,7 @@ export interface PostsProps {
   posts: PostPreviewProps[];
 }
 
-const Posts: FC<PostsProps> = (props) => {
+function Posts(props: PostsProps) {
   const { posts } = props;
 
   return (
@@ -22,6 +22,6 @@ const Posts: FC<PostsProps> = (props) => {
       })}
     </ol>
   );
-};
+}
 
 export default Posts;

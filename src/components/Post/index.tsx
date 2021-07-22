@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 
 import dayjs from 'dayjs';
-import React, { FC } from 'react';
+import React from 'react';
 import { DATE_FORMAT } from '../../constants/date';
 import Tags from '../Tags';
 
@@ -13,7 +13,7 @@ export interface PostProps {
   title: string;
 }
 
-const Post: FC<PostProps> = (props) => {
+function Post(props: PostProps) {
   const { date, html, tags, timeToRead, title } = props;
 
   return (
@@ -32,6 +32,6 @@ const Post: FC<PostProps> = (props) => {
       </footer>
     </article>
   );
-};
+}
 
 export default Post;

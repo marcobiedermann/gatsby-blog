@@ -1,5 +1,5 @@
 import { graphql, PageProps } from 'gatsby';
-import React, { FC } from 'react';
+import React from 'react';
 import Layout from '../../components/Layout';
 import Posts from '../../components/Posts';
 
@@ -37,7 +37,9 @@ interface PageContext {
   tag: string;
 }
 
-const TagTemplate: FC<PageProps<DataType, PageContext>> = (props) => {
+export interface TagTemplateProps extends PageProps<DataType, PageContext> {}
+
+function TagTemplate(props: TagTemplateProps) {
   const {
     data: { allMarkdownRemark },
     pageContext: { tag },
@@ -49,7 +51,7 @@ const TagTemplate: FC<PageProps<DataType, PageContext>> = (props) => {
       <Posts posts={allMarkdownRemark.edges.map((edge) => edge.node)} />
     </Layout>
   );
-};
+}
 
 export const query = graphql`
   query ($tag: String!) {

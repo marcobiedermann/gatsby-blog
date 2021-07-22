@@ -1,5 +1,5 @@
 import { graphql, Link, PageProps, useStaticQuery } from 'gatsby';
-import React, { FC } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
 
 interface Tag {
@@ -15,7 +15,9 @@ interface StaticQuery {
   allMarkdownRemark: AllMarkdownRemark;
 }
 
-const TagsPage: FC<PageProps> = () => {
+export interface TagsPageProps extends PageProps {}
+
+function TagsPage() {
   const { allMarkdownRemark } = useStaticQuery<StaticQuery>(graphql`
     query {
       allMarkdownRemark {
@@ -45,6 +47,6 @@ const TagsPage: FC<PageProps> = () => {
       </ul>
     </Layout>
   );
-};
+}
 
 export default TagsPage;

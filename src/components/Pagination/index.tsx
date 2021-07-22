@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { Link } from 'gatsby';
-import React, { FC } from 'react';
+import React from 'react';
 import * as styles from './style.module.css';
 
 export interface PaginationProps {
@@ -16,7 +16,7 @@ export interface PaginationProps {
   } | null;
 }
 
-const Pagination: FC<PaginationProps> = (props) => {
+function Pagination(props: PaginationProps) {
   const { next, previous } = props;
 
   return (
@@ -33,6 +33,6 @@ const Pagination: FC<PaginationProps> = (props) => {
       )}
     </ul>
   );
-};
+}
 
 export default Pagination;

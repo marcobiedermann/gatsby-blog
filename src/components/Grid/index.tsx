@@ -1,6 +1,12 @@
-import React, { FC } from 'react';
+import React, { ReactNode } from 'react';
 import * as styles from './style.module.css';
 
-const Grid: FC = (props) => <div className={styles.grid} {...props} />;
+export interface GridProps {
+  children: ReactNode;
+}
+
+function Grid(props: GridProps) {
+  return <div className={styles.grid} {...props} />;
+}
 
 export default Grid;

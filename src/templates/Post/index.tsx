@@ -1,5 +1,5 @@
 import { graphql, PageProps } from 'gatsby';
-import React, { FC } from 'react';
+import React from 'react';
 import Button from '../../components/Button';
 import Layout from '../../components/Layout';
 import Pagination from '../../components/Pagination';
@@ -34,7 +34,9 @@ interface PageContextType {
   } | null;
 }
 
-const PostTemplate: FC<PageProps<DataType, PageContextType>> = (props) => {
+export interface PostTemplateProps extends PageProps<DataType, PageContextType> {}
+
+function PostTemplate(props: PostTemplateProps) {
   const {
     data: {
       markdownRemark: {
@@ -59,7 +61,7 @@ const PostTemplate: FC<PageProps<DataType, PageContextType>> = (props) => {
       </Section>
     </Layout>
   );
-};
+}
 
 export const query = graphql`
   query ($id: String!) {

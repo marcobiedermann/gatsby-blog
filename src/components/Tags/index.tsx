@@ -1,12 +1,12 @@
 import { Link } from 'gatsby';
-import React, { FC } from 'react';
+import React from 'react';
 import * as styles from './style.module.css';
 
 export interface TagsProps {
   tags: string[];
 }
 
-const Tags: FC<TagsProps> = (props) => {
+function Tags(props: TagsProps) {
   const { tags } = props;
 
   return (
@@ -20,6 +20,6 @@ const Tags: FC<TagsProps> = (props) => {
       ))}
     </ul>
   );
-};
+}
 
 export default Tags;

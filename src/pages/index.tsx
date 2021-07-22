@@ -1,5 +1,5 @@
 import { graphql, PageProps, useStaticQuery } from 'gatsby';
-import React, { FC } from 'react';
+import React from 'react';
 import Layout from '../components/Layout';
 import Posts from '../components/Posts';
 
@@ -33,7 +33,9 @@ interface StaticQuery {
   allMarkdownRemark: AllMarkdownRemark;
 }
 
-const IndexPage: FC<PageProps> = () => {
+export interface IndexPageProps extends PageProps {}
+
+function IndexPage() {
   const { allMarkdownRemark } = useStaticQuery<StaticQuery>(graphql`
     query {
       allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }, limit: 10) {
@@ -62,6 +64,6 @@ const IndexPage: FC<PageProps> = () => {
       <Posts posts={allMarkdownRemark.edges.map((edge) => edge.node)} />
     </Layout>
   );
-};
+}
 
 export default IndexPage;

@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 import { Link } from 'gatsby';
-import React, { FC } from 'react';
+import React from 'react';
 import { DATE_FORMAT } from '../../constants/date';
 
 interface Fields {
@@ -20,7 +20,7 @@ export interface PostPreviewProps {
   timeToRead: number;
 }
 
-const PostPreview: FC<PostPreviewProps> = (props) => {
+function PostPreview(props: PostPreviewProps) {
   const { excerpt, fields, frontmatter, timeToRead } = props;
 
   return (
@@ -35,6 +35,6 @@ const PostPreview: FC<PostPreviewProps> = (props) => {
       <p>{excerpt}</p>
     </article>
   );
-};
+}
 
 export default PostPreview;

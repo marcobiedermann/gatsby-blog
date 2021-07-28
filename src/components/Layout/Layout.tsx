@@ -5,7 +5,7 @@ import Footer from '../Footer';
 import Grid from '../Grid';
 import Header from '../Header';
 import Main from '../Main';
-import * as styles from './style.module.css';
+import * as styles from './Layout.module.css';
 
 export interface LayoutProps {
   children: ReactNode;

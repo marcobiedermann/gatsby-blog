@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { Link } from 'gatsby';
 import React from 'react';
-import * as styles from './style.module.css';
+import * as styles from './Pagination.module.css';
 
 export interface PaginationProps {
   next: {

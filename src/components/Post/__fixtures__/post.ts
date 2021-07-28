@@ -1,5 +1,5 @@
-import { PostProps } from '..';
-import tags from '../../Tags/__fixtures__';
+import { PostProps } from '../Post';
+import tags from '../../Tags/__fixtures__/tags';
 
 const post: PostProps = {
   date: '2000-01-01',

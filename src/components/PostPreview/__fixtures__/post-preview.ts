@@ -1,4 +1,4 @@
-import { PostPreviewProps } from '..';
+import { PostPreviewProps } from '../PostPreview';
 
 const postPreview: PostPreviewProps = {
   id: '12345678-9012-3456-7890-123456789012',

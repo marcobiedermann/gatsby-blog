@@ -1,4 +1,4 @@
-import { PaginationProps } from '..';
+import { PaginationProps } from '../Pagination';
 
 const pagination: PaginationProps = {
   next: {

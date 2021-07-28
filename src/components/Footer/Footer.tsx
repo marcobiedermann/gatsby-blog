@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import * as styles from './style.module.css';
+import * as styles from './Footer.module.css';
 
 export interface FooterProps {
   children: ReactNode;

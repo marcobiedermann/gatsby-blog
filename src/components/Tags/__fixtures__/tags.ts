@@ -1,4 +1,4 @@
-import { TagsProps } from '..';
+import { TagsProps } from '../Tags';
 
 const tags: TagsProps = {
   tags: ['tag-1'],

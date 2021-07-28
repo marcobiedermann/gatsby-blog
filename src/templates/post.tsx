@@ -1,10 +1,10 @@
 import { graphql, PageProps } from 'gatsby';
 import React from 'react';
-import Button from '../../components/Button';
-import Layout from '../../components/Layout';
-import Pagination from '../../components/Pagination';
-import Post from '../../components/Post';
-import Section from '../../components/Section';
+import Button from '../components/Button';
+import Layout from '../components/Layout';
+import Pagination from '../components/Pagination';
+import Post from '../components/Post';
+import Section from '../components/Section';
 
 export interface DataType {
   markdownRemark: {

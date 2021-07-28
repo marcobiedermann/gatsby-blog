@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import * as styles from './style.module.css';
+import * as styles from './Tags.module.css';
 
 export interface TagsProps {
   tags: string[];

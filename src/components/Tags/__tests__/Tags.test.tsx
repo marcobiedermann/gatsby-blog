@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import Posts from '..';
-import posts from '../__fixtures__';
+import Tags from '..';
+import tags from '../__fixtures__/tags';
 
-describe('posts component', () => {
+describe('tags component', () => {
   it('should render correctly', () => {
-    const { container } = render(<Posts {...posts} />);
+    const { container } = render(<Tags {...tags} />);
 
     expect(container.firstChild).toMatchSnapshot();
   });

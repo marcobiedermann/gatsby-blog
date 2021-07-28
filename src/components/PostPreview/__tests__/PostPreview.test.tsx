@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import React from 'react';
 import PostPreview from '..';
-import postPreview from '../__fixtures__';
+import postPreview from '../__fixtures__/post-preview';
 
 describe('post preview component', () => {
   it('should render correctly', () => {

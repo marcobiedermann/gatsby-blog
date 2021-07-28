@@ -53,6 +53,14 @@ a:hover {
   color: #007a7f;
 }
 
+button {
+  border: 0;
+  background: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
 blockquote {
   border-left: 0.125em solid;
   font-style: italic;

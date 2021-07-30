@@ -1,8 +1,7 @@
 .header {
   background-color: #f0f6fc;
   box-shadow: 0 2em 2em -1em rgba(0, 0, 0, 0.125);
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
+  padding-block: 0.5em;
   position: sticky;
   top: 0;
   z-index: 1;

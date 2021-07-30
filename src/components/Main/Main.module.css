@@ -1,5 +1,4 @@
 .main {
   flex-grow: 1;
-  margin-bottom: 6em;
-  margin-top: 6em;
+  margin-block: 6em;
 }

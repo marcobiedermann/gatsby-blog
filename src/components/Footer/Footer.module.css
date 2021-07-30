@@ -1,8 +1,5 @@
 .footer {
-  /* background-color: #07070f; */
-  background-color: #1a202c;
   background-color: #0d1117;
   color: #f0f6fc;
-  padding-bottom: 3em;
-  padding-top: 3em;
+  padding-block: 3em;
 }

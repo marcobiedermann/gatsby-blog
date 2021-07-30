@@ -10,9 +10,18 @@ A starter for [Gatsby](https://www.gatsbyjs.com/) blog powered by Markdown.
 
 ## Table of Contents
 
+- [Features](#features)
 - [Setup](#setup)
 - [Usage](#usage)
 - [License](#license)
+
+## Features
+
+- Write posts in [Markdown](https://en.wikipedia.org/wiki/Markdown)
+- Group posts by tag
+- Use [embeds](https://github.com/MichaelDeBoey/gatsby-remark-embedder) inside posts
+- Yearly archive
+- Code [syntax highlight](https://prismjs.com/)
 
 ## Setup
 

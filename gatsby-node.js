@@ -1,8 +1,10 @@
-const { resolve } = require('path');
+const dayjs = require('dayjs');
 const { createFilePath } = require('gatsby-source-filesystem');
+const { resolve } = require('path');
 
 const postTemplate = resolve('./src/templates/post.tsx');
 const tagTemplate = resolve('./src/templates/tag.tsx');
+const yearTemplate = resolve('./src/templates/year.tsx');
 
 async function createPages({ graphql, actions, reporter }) {
   const { createPage } = actions;
@@ -10,7 +12,8 @@ async function createPages({ graphql, actions, reporter }) {
   const { data, errors } = await graphql(`
     {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }, limit: 1000) {
-        distinct(field: frontmatter___tags)
+        tags: distinct(field: frontmatter___tags)
+        years: distinct(field: fields___year)
         edges {
           next {
             fields {
@@ -40,16 +43,16 @@ async function createPages({ graphql, actions, reporter }) {
   }
 
   const {
-    allMarkdownRemark: { distinct, edges },
+    allMarkdownRemark: { edges, tags, years },
   } = data;
 
-  distinct.forEach((tag) => {
+  years.forEach((year) => {
     createPage({
-      component: tagTemplate,
+      component: yearTemplate,
       context: {
-        tag,
+        year: parseInt(year, 10),
       },
-      path: `/tags/${tag}`,
+      path: `/blog/${year}`,
     });
   });
 
@@ -70,23 +73,39 @@ async function createPages({ graphql, actions, reporter }) {
       path: `/blog${fields.slug}`,
     });
   });
+
+  tags.forEach((tag) => {
+    createPage({
+      component: tagTemplate,
+      context: {
+        tag,
+      },
+      path: `/tags/${tag}`,
+    });
+  });
 }
 
 function onCreateNode({ node, actions, getNode }) {
   const { internal } = node;
 
   if (internal.type === 'MarkdownRemark') {
+    const { frontmatter } = node;
     const { createNodeField } = actions;
-    const value = createFilePath({
-      getNode,
-      node,
-      trailingSlash: false,
-    });
 
     createNodeField({
       name: 'slug',
       node,
-      value,
+      value: createFilePath({
+        getNode,
+        node,
+        trailingSlash: false,
+      }),
+    });
+
+    createNodeField({
+      name: 'year',
+      node,
+      value: dayjs(frontmatter.date).year(),
     });
   }
 }

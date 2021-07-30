@@ -1,6 +1,6 @@
 .button {
-  border-radius: 999em;
   border: 1px solid;
+  border-radius: 999em;
   display: inline-block;
   font-size: 1rem;
   padding: 1em 3.5em;

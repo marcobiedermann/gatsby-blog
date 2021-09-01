@@ -20,7 +20,7 @@
     "gatsby-remark-images": "^5.7.0",
     "gatsby-remark-prismjs": "^5.7.0",
     "gatsby-remark-responsive-iframe": "^4.7.0",
-    "gatsby-source-filesystem": "^3.10.0",
+    "gatsby-source-filesystem": "^3.13.0",
     "gatsby-transformer-remark": "^4.7.0",
     "gatsby-transformer-sharp": "^3.10.0",
     "prism-theme-night-owl": "^1.4.0",

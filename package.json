@@ -17,7 +17,7 @@
     "gatsby-plugin-twitter": "^3.10.0",
     "gatsby-remark-autolink-headers": "^4.7.0",
     "gatsby-remark-embedder": "^5.0.0",
-    "gatsby-remark-images": "^5.7.0",
+    "gatsby-remark-images": "^5.10.0",
     "gatsby-remark-prismjs": "^5.7.0",
     "gatsby-remark-responsive-iframe": "^4.7.0",
     "gatsby-source-filesystem": "^3.10.0",

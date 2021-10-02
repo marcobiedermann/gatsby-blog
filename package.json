@@ -63,13 +63,13 @@
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "format": "prettier --ignore-path .gitignore --write .",
-    "lint:css": "stylelint --ignore-path .gitignore '**/*.css'",
-    "lint:js": "eslint --ignore-path .gitignore '**/*.{js,jsx,ts,tsx}'",
+    "lint:css": "stylelint --cache --ignore-path .gitignore '**/*.css'",
+    "lint:js": "eslint --cache --ignore-path .gitignore '**/*.{js,jsx,ts,tsx}'",
     "lint": "npm run lint:css && npm run lint:js",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test": "jest --runInBand",
-    "test:ci": "npm run test -- --color --ci"
+    "test": "jest --maxWorkers=50%",
+    "test:ci": "jest --ci --coverage --runInBand"
   },
   "repository": {
     "type": "git",

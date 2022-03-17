@@ -146,19 +146,19 @@ th {
   text-align: left;
 }
 
-th[align='center'] {
+th[align="center"] {
   text-align: center;
 }
 
-th[align='right'] {
+th[align="right"] {
   text-align: right;
 }
 
-code[class*='language-'],
-pre[class*='language-'] {
-  font-family: Fira Code, monospace;
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: "Fira Code", monospace;
 }
 
-pre[class*='language-'] {
+pre[class*="language-"] {
   margin-block: 0.5em 1.5em;
 }

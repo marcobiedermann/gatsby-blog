@@ -20,7 +20,7 @@ exports[`layout component should render correctly 1`] = `
     <div>
       <p>
         © 
-        2021
+        2022
         , Built with
          
         <a

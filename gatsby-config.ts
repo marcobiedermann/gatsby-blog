@@ -1,4 +1,7 @@
-const config = {
+import type { GatsbyConfig } from 'gatsby';
+import { resolve } from 'path';
+
+const config: GatsbyConfig = {
   siteMetadata: {
     author: '@gatsbyjs',
     description:
@@ -39,14 +42,14 @@ const config = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/src/images`,
+        path: resolve('src/images'),
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path: `${__dirname}/src/posts`,
+        path: resolve('src/posts'),
       },
     },
     {
@@ -60,7 +63,7 @@ const config = {
             resolve: 'gatsby-remark-embedder',
           },
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
           },
           {
             resolve: 'gatsby-remark-prismjs',
@@ -77,4 +80,4 @@ const config = {
   ],
 };
 
-module.exports = config;
+export default config;

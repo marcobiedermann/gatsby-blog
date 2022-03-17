@@ -1,12 +1,46 @@
-const dayjs = require('dayjs');
-const { createFilePath } = require('gatsby-source-filesystem');
-const { resolve } = require('path');
+import dayjs from 'dayjs';
+import { resolve } from 'path';
+import { createFilePath } from 'gatsby-source-filesystem';
+import type { GatsbyNode } from 'gatsby';
 
 const postTemplate = resolve('./src/templates/post.tsx');
 const tagTemplate = resolve('./src/templates/tag.tsx');
 const yearTemplate = resolve('./src/templates/year.tsx');
 
-async function createPages({ graphql, actions, reporter }) {
+interface Edge {
+  next: {
+    fields: {
+      slug: string;
+    };
+  };
+  node: {
+    fields: {
+      slug: string;
+    };
+    id: string;
+  };
+  previous: {
+    fields: {
+      slug: string;
+    };
+  };
+}
+
+interface Data {
+  allMarkdownRemark: {
+    tags: string[];
+    years: string[];
+    edges: Edge[];
+  };
+}
+
+interface Node {
+  frontmatter: {
+    date: string;
+  };
+}
+
+const createPages: GatsbyNode['createPages'] = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
   const { data, errors } = await graphql(`
@@ -37,14 +71,14 @@ async function createPages({ graphql, actions, reporter }) {
   `);
 
   if (errors) {
-    reporter.panicBuild('There was an error loading your blog posts', errors);
+    reporter.panicOnBuild('There was an error loading your blog posts', errors);
 
     return;
   }
 
   const {
     allMarkdownRemark: { edges, tags, years },
-  } = data;
+  } = data as Data;
 
   years.forEach((year) => {
     createPage({
@@ -83,13 +117,13 @@ async function createPages({ graphql, actions, reporter }) {
       path: `/tags/${tag}`,
     });
   });
-}
+};
 
-function onCreateNode({ node, actions, getNode }) {
+const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, actions, getNode }) => {
   const { internal } = node;
 
   if (internal.type === 'MarkdownRemark') {
-    const { frontmatter } = node;
+    const { frontmatter } = node as unknown as Node;
     const { createNodeField } = actions;
 
     createNodeField({
@@ -108,9 +142,6 @@ function onCreateNode({ node, actions, getNode }) {
       value: dayjs(frontmatter.date).year(),
     });
   }
-}
-
-module.exports = {
-  createPages,
-  onCreateNode,
 };
+
+export { createPages, onCreateNode };

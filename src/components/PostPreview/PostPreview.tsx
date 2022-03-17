@@ -16,6 +16,7 @@ export interface PostPreviewProps {
   excerpt: string;
   fields: Fields;
   frontmatter: Frontmatter;
+  /* eslint-disable-next-line react/no-unused-prop-types */
   id: string;
   timeToRead: number;
 }

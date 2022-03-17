@@ -118,7 +118,12 @@ html {
 
 iframe {
   border: 0;
-  height: 533px;
+}
+
+iframe[src*="codepen"],
+iframe[src*="youtube"] {
+  aspect-ratio: 16 / 9;
+  height: auto !important;
 }
 
 img {

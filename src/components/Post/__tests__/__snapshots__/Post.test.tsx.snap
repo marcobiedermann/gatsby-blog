@@ -25,9 +25,12 @@ exports[`post component should render correctly 1`] = `
     </div>
   </main>
   <footer>
-    <ul>
+    <ul
+      class="tags"
+    >
       <li>
         <a
+          class="tag"
           href="/tags/tag-1"
         >
           tag-1

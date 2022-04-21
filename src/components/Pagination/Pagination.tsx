@@ -1,7 +1,13 @@
+/* eslint-disable camelcase */
+
 import classNames from 'classnames';
 import { Link } from 'gatsby';
 import React from 'react';
-import * as styles from './Pagination.module.css';
+import {
+  pagination,
+  pagination__itemNext,
+  pagination__itemPrevious,
+} from './Pagination.module.css';
 
 export interface PaginationProps {
   next: {
@@ -20,14 +26,14 @@ function Pagination(props: PaginationProps) {
   const { next, previous } = props;
 
   return (
-    <ul className={styles.pagination}>
+    <ul className={pagination}>
       {previous && (
-        <li className={classNames(styles.pagination__itemPrevious)}>
+        <li className={classNames(pagination__itemPrevious)}>
           <Link to={`/blog${previous.fields.slug}`}>« Previous</Link>
         </li>
       )}
       {next && (
-        <li className={classNames(styles.pagination__itemNext)}>
+        <li className={classNames(pagination__itemNext)}>
           <Link to={`/blog${next.fields.slug}`}>Next »</Link>
         </li>
       )}

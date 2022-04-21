@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React, { ReactNode } from 'react';
-import * as styles from './Button.module.css';
+import { button } from './Button.module.css';
 
 export interface ButtonProps {
   children: ReactNode;
@@ -11,10 +11,10 @@ function Button(props: ButtonProps) {
   const { to, ...otherProps } = props;
 
   if (to) {
-    return <Link className={styles.button} to={to} {...otherProps} />;
+    return <Link className={button} to={to} {...otherProps} />;
   }
 
-  return <button className={styles.button} type="button" {...otherProps} />;
+  return <button className={button} type="button" {...otherProps} />;
 }
 
 export default Button;

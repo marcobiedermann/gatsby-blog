@@ -5,7 +5,7 @@ import Footer from '../Footer';
 import Grid from '../Grid';
 import Header from '../Header';
 import Main from '../Main';
-import * as styles from './Layout.module.css';
+import { layout } from './Layout.module.css';
 
 export interface LayoutProps {
   children: ReactNode;
@@ -15,7 +15,7 @@ function Layout(props: LayoutProps) {
   const { children } = props;
 
   return (
-    <div className={styles.layout}>
+    <div className={layout}>
       <Header>
         <Grid>
           <Link to="/">Gatsby Blog</Link>

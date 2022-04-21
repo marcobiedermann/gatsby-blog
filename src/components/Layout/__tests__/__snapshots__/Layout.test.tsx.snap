@@ -1,9 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`layout component should render correctly 1`] = `
-<div>
-  <header>
-    <div>
+<div
+  class="layout"
+>
+  <header
+    class="header"
+  >
+    <div
+      class="grid"
+    >
       <a
         href="/"
       >
@@ -11,13 +17,21 @@ exports[`layout component should render correctly 1`] = `
       </a>
     </div>
   </header>
-  <main>
-    <div>
+  <main
+    class="main"
+  >
+    <div
+      class="grid"
+    >
       Content
     </div>
   </main>
-  <footer>
-    <div>
+  <footer
+    class="footer"
+  >
+    <div
+      class="grid"
+    >
       <p>
         © 
         2022

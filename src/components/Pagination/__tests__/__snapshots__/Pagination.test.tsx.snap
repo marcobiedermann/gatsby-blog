@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`pagination component should render correctly 1`] = `
-<ul>
+<ul
+  class="pagination"
+>
   <li
-    class=""
+    class="pagination__itemPrevious"
   >
     <a
       href="/blogprevious-post"
@@ -12,7 +14,7 @@ exports[`pagination component should render correctly 1`] = `
     </a>
   </li>
   <li
-    class=""
+    class="pagination__itemNext"
   >
     <a
       href="/blognext-post"

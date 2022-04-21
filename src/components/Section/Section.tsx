@@ -1,12 +1,12 @@
 import React, { ReactNode } from 'react';
-import * as styles from './Section.module.css';
+import { section } from './Section.module.css';
 
 export interface SectionProps {
   children: ReactNode;
 }
 
 function Section(props: SectionProps) {
-  return <section className={styles.section} {...props} />;
+  return <section className={section} {...props} />;
 }
 
 export default Section;

@@ -69,7 +69,7 @@
     "lint": "npm run lint:css && npm run lint:js",
     "serve": "gatsby serve",
     "start": "npm run develop",
-    "test": "jest --maxWorkers=50%",
+    "test": "jest --maxWorkers=50% --watch",
     "test:ci": "jest --ci --coverage --runInBand"
   },
   "repository": {

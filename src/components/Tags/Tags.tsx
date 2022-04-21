@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import * as styles from './Tags.module.css';
+import { tags as tagsStyles, tag as tagStyles } from './Tags.module.css';
 
 export interface TagsProps {
   tags: string[];
@@ -10,10 +10,10 @@ function Tags(props: TagsProps) {
   const { tags } = props;
 
   return (
-    <ul className={styles.tags}>
+    <ul className={tagsStyles}>
       {tags.map((tag) => (
         <li key={tag}>
-          <Link className={styles.tag} to={`/tags/${tag}`}>
+          <Link className={tagStyles} to={`/tags/${tag}`}>
             {tag}
           </Link>
         </li>

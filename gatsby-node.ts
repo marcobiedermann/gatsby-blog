@@ -1,5 +1,5 @@
+import { resolve } from 'node:path';
 import dayjs from 'dayjs';
-import { resolve } from 'path';
 import { createFilePath } from 'gatsby-source-filesystem';
 import type { GatsbyNode } from 'gatsby';
 

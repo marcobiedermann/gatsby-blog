@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 
-import classNames from 'classnames';
+import clsx from 'clsx';
 import { Link } from 'gatsby';
 import React from 'react';
 import {
@@ -28,12 +28,12 @@ function Pagination(props: PaginationProps) {
   return (
     <ul className={pagination}>
       {previous && (
-        <li className={classNames(pagination__itemPrevious)}>
+        <li className={clsx(pagination__itemPrevious)}>
           <Link to={`/blog${previous.fields.slug}`}>« Previous</Link>
         </li>
       )}
       {next && (
-        <li className={classNames(pagination__itemNext)}>
+        <li className={clsx(pagination__itemNext)}>
           <Link to={`/blog${next.fields.slug}`}>Next »</Link>
         </li>
       )}

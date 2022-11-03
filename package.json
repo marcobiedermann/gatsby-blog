@@ -64,7 +64,7 @@
     "build": "gatsby build",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
-    "format": "prettier --ignore-path .gitignore --write .",
+    "format": "prettier --cache --ignore-path .gitignore --write .",
     "lint:css": "stylelint --cache --ignore-path .gitignore '**/*.css'",
     "lint:js": "eslint --cache --ignore-path .gitignore '**/*.{js,jsx,ts,tsx}'",
     "lint": "npm run lint:css && npm run lint:js",

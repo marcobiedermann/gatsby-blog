@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Marco Biedermann",
   "dependencies": {
-    "@fontsource/montserrat": "^4.5.13",
+    "@fontsource/montserrat": "^5.0.17",
     "clsx": "^1.2.1",
     "dayjs": "^1.11.10",
     "gatsby": "^4.24.6",

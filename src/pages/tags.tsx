@@ -21,7 +21,7 @@ function TagsPage() {
   const { allMarkdownRemark } = useStaticQuery<StaticQuery>(graphql`
     query {
       allMarkdownRemark {
-        group(field: frontmatter___tags) {
+        group(field: { frontmatter: { tags: SELECT } }) {
           fieldValue
           totalCount
         }

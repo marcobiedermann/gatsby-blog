@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
-import { resolve } from 'path';
-import { createFilePath } from 'gatsby-source-filesystem';
 import type { GatsbyNode } from 'gatsby';
+import { createFilePath } from 'gatsby-source-filesystem';
+import { resolve } from 'path';
 
 const postTemplate = resolve('./src/templates/post.tsx');
 const tagTemplate = resolve('./src/templates/tag.tsx');
@@ -45,9 +45,9 @@ const createPages: GatsbyNode['createPages'] = async ({ graphql, actions, report
 
   const { data, errors } = await graphql(`
     {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: ASC }, limit: 1000) {
-        tags: distinct(field: frontmatter___tags)
-        years: distinct(field: fields___year)
+      allMarkdownRemark(sort: { frontmatter: { date: ASC } }, limit: 1000) {
+        tags: distinct(field: { frontmatter: { tags: SELECT } })
+        years: distinct(field: { fields: { year: SELECT } })
         edges {
           next {
             fields {

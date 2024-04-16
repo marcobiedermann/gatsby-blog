@@ -38,7 +38,7 @@ export interface IndexPageProps extends PageProps {}
 function IndexPage() {
   const { allMarkdownRemark } = useStaticQuery<StaticQuery>(graphql`
     query {
-      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }, limit: 10) {
+      allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 10) {
         edges {
           node {
             excerpt

@@ -57,7 +57,7 @@ export const query = graphql`
   query ($year: Int!) {
     allMarkdownRemark(
       filter: { fields: { year: { eq: $year } } }
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { frontmatter: { date: DESC } }
       limit: 10
     ) {
       edges {

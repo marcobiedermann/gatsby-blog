@@ -6,7 +6,7 @@
   "author": "Marco Biedermann",
   "dependencies": {
     "@fontsource/montserrat": "^5.0.17",
-    "clsx": "^1.2.1",
+    "clsx": "^2.1.0",
     "dayjs": "^1.11.10",
     "gatsby": "^4.24.6",
     "gatsby-plugin-image": "^2.24.0",

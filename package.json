@@ -30,7 +30,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "@testing-library/react": "^15.0.7",
+    "@testing-library/react": "^16.0.0",
     "@types/jest": "^29.5.12",
     "@types/react-helmet": "^6.1.11",
     "@typescript-eslint/eslint-plugin": "^5.42.0",

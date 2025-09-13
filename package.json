@@ -7,7 +7,7 @@
   "dependencies": {
     "@fontsource/montserrat": "^5.2.6",
     "clsx": "^2.1.1",
-    "dayjs": "^1.11.12",
+    "dayjs": "^1.11.18",
     "gatsby": "^5.15.0",
     "gatsby-plugin-image": "^3.15.0",
     "gatsby-plugin-manifest": "^5.15.0",
